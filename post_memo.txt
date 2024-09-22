@@ -1,0 +1,6 @@
+POST 요청 보내기:
+
+public/js 안의 .js 파일에서 fetch 구현 -> req의 형태 구현
+router 안의 index.js 파일에서 router.post("/url 주소", ctrl.~~~) 구현
+router 안의 home.ctrl.js 파일에서 콜백 함수 구현 -> res 형태 구현
+fetch().then((res) => res.json()).then()에서 res를 받아서 조건문 등 처리
