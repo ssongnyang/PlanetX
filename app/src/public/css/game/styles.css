@@ -1,5 +1,3 @@
-
-
 body {
     display: flex;
     justify-content: center;
@@ -14,19 +12,19 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, #001d3d, #012a4a, #013a63, #01497c); /* Space colors */
+    /* background: radial-gradient(circle, #001d3d, #012a4a, #013a63, #01497c); Space colors */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .board:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
 }
 
 .circle {
@@ -56,25 +54,12 @@ body {
     transform: rotate(15deg);
 }
 
-/* .half-circle-1 { transform: rotate(0deg) }
-.half-circle-2 { transform: rotate(30deg) }
-.half-circle-3 { transform: rotate(60deg) }
-.half-circle-4 { transform: rotate(90deg) }
-.half-circle-5 { transform: rotate(120deg) }
-.half-circle-6 { transform: rotate(150deg) }
-.half-circle-7 { transform: rotate(180deg); display:none }
-.half-circle-8 { transform: rotate(-150deg); display:none }
-.half-circle-9 { transform: rotate(-120deg); display: none }
-.half-circle-10 { transform: rotate(-90deg); display: none }
-.half-circle-11 { transform: rotate(-60deg); display: none }
-.half-circle-12 { transform: rotate(-30deg); display: none } */
-
 .half-circle > p {
     font-size: 1.5rem;
     text-align: center;
     width: 95px;
     height: 240px;
-    margin-top:10px;
+    margin-top: 10px;
     margin-bottom: 0;
     margin-left: -15px;
     transform-origin: inherit center;
@@ -84,36 +69,7 @@ body {
 .half-circle:hover {
     background-color: aliceblue;
     opacity: 10%;
-    
 }
-
-
-/* Number positions */
-.number {
-    position: absolute;
-    color: grey;
-    font-size: 1.5rem;
-    transform: translate(-50%, -50%);
-    height:50%;
-    left: 50%; 
-    transform-origin: bottom center;
-    text-align: center;
-}
-
-
-
-.number-1 {  transform: rotate(30deg); }
-.number-2 {  transform: rotate(60deg); }
-.number-3 {  transform: rotate(90deg); }
-.number-4 {  transform: rotate(120deg); }
-.number-5 {  transform: rotate(150deg); }
-.number-6 {  transform: rotate(180deg); }
-.number-7 {  transform: rotate(-150deg); }
-.number-8 {  transform: rotate(-120deg); }
-.number-9 {  transform: rotate(-90deg); }
-.number-10 {  transform: rotate(-60deg); }
-.number-11 {  transform: rotate(-30deg); }
-.number-12 {  transform: rotate(0deg);}
 
 .half-circle-dummy {
     color: aliceblue;
@@ -127,7 +83,7 @@ body {
 
 .cover {
     background: radial-gradient(circle, #001d3d, #012a4a, #013a63, #01497c); /* Space colors */
-    left: 50%
+    left: 50%;
 }
 
 .dark-sector {
@@ -135,24 +91,18 @@ body {
     border-top-right-radius: 0;
     border-bottom-left-radius: 500px;
     border-top-left-radius: 500px;
-    background-color: #1a1a1a;
+    background-color: #0a0a1e;
     transform-origin: center right;
 }
 
-
-
-
-.number-small {
+#movesector,
+#observe {
+    display: block;
     position: absolute;
-    color: white;
-    font-size: 1rem;
-    transform: translate(-50%, -50%);
+    top: 100%;
+    left: 50%;
 }
 
-/* Inner number ring (small numbers) */
-.number-small-1 { top: 20%; left: 60%; }
-.number-small-2 { top: 30%; left: 75%; }
-.number-small-3 { top: 50%; left: 85%; }
-.number-small-4 { top: 70%; left: 75%; }
-.number-small-5 { top: 80%; left: 60%; }
-.number-small-6 { top: 85%; left: 50%; }
+#observe {
+    top: 105%;
+}

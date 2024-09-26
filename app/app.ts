@@ -1,5 +1,5 @@
 "use strict";
-
+export {};
 //nodemon app/bin/www.js
 
 //module

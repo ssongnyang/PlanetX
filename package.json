@@ -4,7 +4,10 @@
     "description": "",
     "main": "package.json",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npm run build:live",
+        "build": "tsc -p .",
+        "build:live": "nodemon --watch 'app/**/*.ts' --exec ts-node app/bin/www.ts"
     },
     "author": "",
     "license": "ISC",
@@ -14,5 +17,11 @@
         "ejs": "^3.1.10",
         "express": "^4.21.0",
         "url": "^0.11.4"
+    },
+    "devDependencies": {
+        "@types/node": "^22.5.5",
+        "nodemon": "^3.1.7",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2"
     }
 }

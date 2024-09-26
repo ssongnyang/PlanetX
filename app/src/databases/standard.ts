@@ -1,4 +1,4 @@
-const celestials = [
+const celestials: number[][] = [
     [5, 3, 3, 1, 4, 4, 4, 4, 2, 6, 5, 6],
     [6, 5, 3, 1, 4, 4, 3, 6, 5, 2, 4, 4],
     [6, 5, 3, 2, 4, 4, 3, 6, 5, 1, 4, 4],
@@ -4446,13 +4446,5 @@ const celestials = [
     [4, 3, 4, 4, 2, 5, 6, 1, 5, 6, 3, 4],
     [4, 3, 4, 4, 2, 5, 6, 6, 5, 1, 3, 4],
 ];
-
-// #randint(max) {
-//     return Math.floor(Math.random() * max);
-// }
-
-// choice() {
-//     return this.celestial[this.#randint(list.length())];
-// }
 
 module.exports = celestials;

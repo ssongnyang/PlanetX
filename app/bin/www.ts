@@ -1,5 +1,5 @@
 "use strict";
-
+export {};
 const app = require("../app");
 
 const PORT = 4000;

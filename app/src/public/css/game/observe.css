@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+}
+
+button {
+    border-radius: 5%;
+}
+
+#observe-menu {
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    background-color: burlywood;
+    border-radius: 5%;
+    z-index: 30;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+.description {
+    text-align: center;
+}
+
+.select-object-text {
+    margin: 3%;
+    vertical-align: middle;
+}
+
+.select-object-text > p {
+    display: inline-block;
+}
+
+#select-object-button {
+    font-family: "Nanum Gothic", sans-serif;
+    color: aliceblue;
+    background-color: black;
+    width: 90px;
+    height: 35px;
+    padding: 5px 8px;
+}
+
+#selected-object-button {
+    display: none;
+    font-family: "Nanum Gothic", sans-serif;
+    color: aliceblue;
+    background-color: black;
+    width: 90px;
+    height: 35px;
+    padding: 0px 0px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border: 0;
+}
+
+#selected-object-button > img {
+    display: inline;
+    width: 30px;
+    height: 30px;
+}
+
+#selected-object-button > p {
+    display: inline;
+    margin: 0;
+}
+
+#select-object-menu {
+    display: none;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 1px;
+    padding: 1px;
+    margin: -10px 72px 20px;
+    background-color: gray;
+    transition: 1s;
+}
+
+#select-object-menu > p {
+    color: aliceblue;
+    box-sizing: border-box;
+    grid-column: span 5;
+    text-align: center;
+    padding: 4px 0;
+    margin: 0;
+    background-color: black;
+}
+
+#select-object-menu > button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    justify-items: auto;
+    align-items: center;
+    background-color: black;
+    border: 0;
+}
+
+#select-object-menu > button > img {
+    width: inherit;
+    height: inherit;
+}
+
+.select-range-menu {
+    display: none;
+    margin: 10px 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#select-start-range-button,
+#select-end-range-button {
+    width: 120px;
+    height: 35px;
+    color: aliceblue;
+    background-color: darkgray;
+    border: 0;
+}
+.waveline {
+    padding: 0 20px;
+}
+
+.range-table-start,
+.range-table-end {
+    display: none;
+    box-sizing: border-box;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    padding: 1px;
+    margin: 10px 60px 20px;
+    background-color: gray;
+    transition: 1s;
+}
+
+.start-sector-text,
+.end-sector-text {
+    grid-column: span 5;
+    margin: 3px 3%;
+}
+
+.start-sectors,
+.end-sectors {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: darkgray;
+}
+
+#confirm-observe-button {
+    display: block;
+    width: 290px;
+    height: 35px;
+    color: aliceblue;
+    background-color: darkgray;
+    border: 0;
+}
+
+#cancel {
+    color: aliceblue;
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    padding: 5%;
+}
+
+#observe {
+    top: 90%;
+    left: 50%;
+}
+
+.line {
+    margin: 0 3% 20px;
+    border: 0px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, white, transparent);
+}

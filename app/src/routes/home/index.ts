@@ -1,5 +1,7 @@
 "use strict";
 
+export {};
+
 const express = require("express");
 const router = express.Router();
 
@@ -9,10 +11,7 @@ router.get("/", ctrl.output.home);
 router.get("/startinfo", ctrl.output.startinfo);
 router.get("/game", ctrl.output.game);
 
-router.post("/", ctrl.process.home);
-// router.get("/register", ctrl.output.register);
-
-// router.post("/login", ctrl.process.login);
-// router.post("/register", ctrl.process.register);
+router.post("/", ctrl.process.startinfo);
+router.post("/game", ctrl.process.observe);
 
 module.exports = router;

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Space-Themed Board</title>
         <link rel="stylesheet" href="css/game/styles.css" />
+        <link rel="stylesheet" href="css/game/observe.css" />
     </head>
     <body>
         <div class="board">
@@ -58,15 +59,71 @@
             <div class="half-circle-dummy cover"></div>
             <div class="half-circle-dummy dark-sector"></div>
 
-            <!-- Smaller numbers around the circle -->
-            <div class="number-small number-small-1">1</div>
-            <div class="number-small number-small-2">2</div>
-            <div class="number-small number-small-3">3</div>
-            <div class="number-small number-small-4">4</div>
-            <div class="number-small number-small-5">5</div>
-            <div class="number-small number-small-6">6</div>
             <div class="circle"></div>
+
+            <!-- <button id="movesector">movesector</button>
+            <button id="observe">observe</button> -->
         </div>
-        <script src="js/game/board.js"></script>
+
+        <div id="observe-menu">
+            <h2>천체 관측</h2>
+            <p class="description">설정한 범위의 크기에 따라 시간 비용이 달라집니다.</p>
+
+            <div class="select-object-text">
+                <p>관측 대상:</p>
+                <button id="select-object-button">(천체 선택)</button>
+                <button id="selected-object-button">
+                    <img id="selected-object-img" src="images/object/dwarf.png" alt="" />
+                    <p id="selected-object-text" style="display: inline-block">왜소행성</p>
+                </button>
+            </div>
+            <div id="select-object-menu">
+                <p>천체 선택</p>
+                <button type="button" class="object-button"><img src="images/object/dwarf.png" alt="" /></button>
+                <button type="button" class="object-button"><img src="images/object/comet.png" alt="" /></button>
+                <button type="button" class="object-button"><img src="images/object/asteroid.png" alt="" /></button>
+                <button type="button" class="object-button"><img src="images/object/gascloud.png" alt="" /></button>
+                <button type="button" class="object-button"><img src="images/object/empty.png" alt="" /></button>
+            </div>
+
+            <div class="select-range-menu">
+                <p style="margin-bottom: 10px">관측 범위:</p>
+                <div class="centering">
+                    <button id="select-start-range-button">(시작 섹터)</button>
+                    <p class="waveline" style="display: inline-flex">~</p>
+                    <button disabled id="select-end-range-button">(끝 섹터)</button>
+                </div>
+                <div class="range-table-start">
+                    <p class="start-sector-text">시작 섹터</p>
+                    <button class="start-sectors">1</button>
+                    <button class="start-sectors">2</button>
+                    <button class="start-sectors">3</button>
+                    <button class="start-sectors">4</button>
+                    <button class="start-sectors">5</button>
+                    <button class="start-sectors">6</button>
+                </div>
+                <div class="range-table-end">
+                    <p class="end-sector-text">끝 섹터</p>
+                    <button class="end-sectors">1</button>
+                    <button class="end-sectors">2</button>
+                    <button class="end-sectors">3</button>
+                    <button class="end-sectors">4</button>
+                    <button class="end-sectors">5</button>
+                    <button class="end-sectors">6</button>
+                </div>
+
+                <div class="centering">
+                    <button disabled id="confirm-observe-button">관측</button>
+                </div>
+            </div>
+
+            <hr class="line" />
+            <div class="center">
+                <button id="cancel">취소</button>
+            </div>
+        </div>
+        <button id="observe">observe</button>
+        <!-- <script src="js/game/board.js"></script> -->
+        <script src="js/game/observe.js"></script>
     </body>
 </html>
