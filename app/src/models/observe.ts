@@ -1,6 +1,5 @@
 export {};
-const celestials: number[][] = require("../databases/standard");
-const { getCombinations, choice } = require("./hint");
+const celestials: { standard: number[][] } = require("../databases/celestials.json");
 
 const PlanetX = 1;
 const Dwarf = 2;
@@ -21,7 +20,7 @@ function count(list: number[], object: number) {
 
 function _observe(code: number, object: number, start: number, end: number) {
     let range: number[];
-    const celestial: number[] = celestials[code];
+    const celestial: number[] = celestials.standard[code];
     if (start <= end) {
         range = celestial.slice(start, end + 1);
     } else {

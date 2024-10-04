@@ -1,5 +1,5 @@
 export {};
-const celestials = require("../databases/standard");
+const celestials: { standard: number[][] } = require("../databases/celestials.json");
 
 const PlanetX = 1;
 const Dwarf = 2;
@@ -57,8 +57,8 @@ function is_prime(num: number) {
 
 function _select_hint(code: number, difficulty: string) {
     const num = hint_num(difficulty);
-    const celestial = celestials[code];
-    let hintSectors = choice(getCombinations([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0], num));
+    const celestial = celestials.standard[code];
+    let hintSectors = choice(getCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], num));
     let hints: Array<{ sector: number; obj: number }> = [];
     hintSectors.forEach((sector) => {
         let f = true;
@@ -74,7 +74,7 @@ function _select_hint(code: number, difficulty: string) {
             }
         }
     });
-    console.log(hints);
+    // console.log(hints);
 
     return { hints: hints };
 }

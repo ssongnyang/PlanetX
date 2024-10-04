@@ -35,7 +35,8 @@ function set_difficulty(difficulty) {
         .then((res) => res.json())
         .then((res) => {
             console.log(res);
-            localStorage.setItem("hints", JSON.stringify(res));
+            localStorage.setItem("hints", JSON.stringify(res.hints));
+            localStorage.setItem("researches", JSON.stringify(res.researches));
             location.href = "/game";
         })
         .catch((err) => {
